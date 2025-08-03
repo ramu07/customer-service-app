@@ -1,3 +1,4 @@
 def register_user(email, name):
-    # Bug: No check for empty email
+    if not email:
+        raise ValueError("Email is required")
     print(f"Registering user: {name} with email: {email}")
